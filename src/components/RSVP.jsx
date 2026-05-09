@@ -1,14 +1,15 @@
 import { useState } from 'react';
 import useScrollReveal from '../hooks/useScrollReveal';
+import emailjs from '@emailjs/browser';
 
 // ─── CONFIGURACIÓN EMAILJS ────────────────────────────────────────────────────
 // 1. Crea cuenta en https://www.emailjs.com (plan gratuito sirve)
 // 2. Crea un Email Service (Gmail recomendado)
 // 3. Crea un Email Template con estas variables: {{nombre}}, {{asistencia}}, {{invitados}}
 // 4. Reemplaza los tres valores de abajo con tus datos reales
-const EMAILJS_SERVICE_ID  = 'TU_SERVICE_ID';   // ej: 'service_abc123'
+const EMAILJS_SERVICE_ID = 'TU_SERVICE_ID';   // ej: 'service_abc123'
 const EMAILJS_TEMPLATE_ID = 'TU_TEMPLATE_ID';  // ej: 'template_xyz456'
-const EMAILJS_PUBLIC_KEY  = 'TU_PUBLIC_KEY';   // ej: 'aBcDeFgH...'
+const EMAILJS_PUBLIC_KEY = 'TU_PUBLIC_KEY';   // ej: 'aBcDeFgH...'
 // ─────────────────────────────────────────────────────────────────────────────
 
 const inputClass = `
@@ -26,22 +27,18 @@ export default function RSVP() {
 
   const handleChange = (e) => setForm({ ...form, [e.target.name]: e.target.value });
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
+  const handleSubmit = async () => {
     if (!form.nombre || !form.asistencia) return;
-
     setStatus('sending');
 
     try {
-      // Carga EmailJS dinámicamente para no necesitar instalación extra
-      const emailjs = await import('https://cdn.jsdelivr.net/npm/@emailjs/browser@4/+esm');
       await emailjs.send(
         EMAILJS_SERVICE_ID,
         EMAILJS_TEMPLATE_ID,
         {
-          nombre:     form.nombre,
+          nombre: form.nombre,
           asistencia: form.asistencia,
-          invitados:  form.asistencia === 'Sí' ? form.invitados : '0',
+          invitados: form.asistencia === 'Sí' ? form.invitados : '0',
         },
         EMAILJS_PUBLIC_KEY
       );
@@ -126,11 +123,10 @@ export default function RSVP() {
                       key={op}
                       type="button"
                       onClick={() => setForm({ ...form, asistencia: op })}
-                      className={`flex-1 py-2.5 text-xs tracking-[0.2em] uppercase border transition-all duration-300 ${
-                        form.asistencia === op
+                      className={`flex-1 py-2.5 text-xs tracking-[0.2em] uppercase border transition-all duration-300 ${form.asistencia === op
                           ? 'border-[#c8b48c] text-[#c8b48c] bg-[#c8b48c]/10'
                           : 'border-[#c8b48c]/20 text-[#554e45] hover:border-[#c8b48c]/40'
-                      }`}
+                        }`}
                     >
                       {op}
                     </button>
