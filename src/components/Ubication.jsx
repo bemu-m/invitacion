@@ -1,0 +1,100 @@
+import { MapPin } from 'lucide-react';
+import useScrollReveal from '../hooks/useScrollReveal';
+import adornoImg from '../assets/images/ador_esquina_arriba_izquierda.png';
+
+export default function Ubication() {
+  const [ref, visible]         = useScrollReveal();
+  const [refFoto, visibleFoto] = useScrollReveal();
+
+  return (
+    <section className="relative bg-white overflow-hidden">
+
+      <div
+        ref={ref}
+        className="relative px-6 py-16"
+        style={{ opacity: visible ? 1 : 0, transform: visible ? 'translateY(0)' : 'translateY(40px)', transition: 'opacity 0.8s ease, transform 0.8s ease' }}
+      >
+        <img src={adornoImg} alt="" aria-hidden="true" className="absolute top-0 left-0 w-28 pointer-events-none select-none" style={{ opacity: 0.7 }} />
+        <img src={adornoImg} alt="" aria-hidden="true" className="absolute top-0 right-0 w-28 pointer-events-none select-none" style={{ opacity: 0.7, transform: 'scaleX(-1)' }} />
+
+        <div className="max-w-sm mx-auto flex flex-col items-center text-center">
+
+          <p className="text-[10px] tracking-[0.4em] uppercase text-[#c9a84c] mb-3 mt-8">Lugar del evento</p>
+          <h2 className="text-5xl font-light italic text-[#2d4a38] mb-6" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
+            Recepción
+          </h2>
+
+          <div className="flex items-center gap-3 w-full max-w-[160px] mb-8">
+            <span className="flex-1 h-px bg-[#c9a84c]/30" />
+            <span className="text-[#c9a84c] text-[10px]">✦</span>
+            <span className="flex-1 h-px bg-[#c9a84c]/30" />
+          </div>
+
+          <p className="text-[10px] tracking-[0.3em] uppercase text-[#c9a84c] mb-1">6:00 PM</p>
+          <p className="text-base font-light tracking-widest text-[#2d4a38] uppercase mb-1">
+            Salón Gardenias
+          </p>
+          <p className="text-xs italic text-[#7A9E87] mb-8">
+            Dirección del lugar
+          </p>
+
+          <a
+            href="https://share.google/8XEq3jAqPhjD0Mug1"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 px-6 py-2.5 border border-[#c9a84c]/50 text-[#c9a84c] text-[9px] tracking-[0.3em] uppercase hover:bg-[#c9a84c]/10 transition-all duration-300 mb-10"
+          >
+            <MapPin size={12} />
+            Ver ubicación
+          </a>
+
+          <div className="w-full rounded overflow-hidden border border-[#c9a84c]/20" style={{ height: '220px' }}>
+            <iframe
+              title="Ubicación del evento"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d120000!2d-93.1!3d16.75!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTbCsDQ1JzAwLjAiTiA5M8KwMDYnMDAuMCJX!5e0!3m2!1ses!2smx!4v1234567890"
+              width="100%"
+              height="220"
+              style={{ border: 0 }}
+              allowFullScreen=""
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            />
+          </div>
+
+        </div>
+      </div>
+
+      <div
+        ref={refFoto}
+        className="relative w-full"
+        style={{ opacity: visibleFoto ? 1 : 0, transform: visibleFoto ? 'translateY(0)' : 'translateY(40px)', transition: 'opacity 0.9s ease 0.2s, transform 0.9s ease 0.2s' }}
+      >
+        <div className="relative w-full overflow-hidden" style={{ aspectRatio: '3/4' }}>
+          <div className="w-full h-full bg-[#f4f9f6] flex flex-col items-center justify-center text-[#ACC8B4]/40 gap-3">
+            <span className="text-[9px] tracking-widest uppercase">foto de vale</span>
+          </div>
+
+          <div
+            className="absolute inset-0"
+            style={{
+              background: 'linear-gradient(to bottom, transparent 40%, rgba(255,255,255,0.3) 60%, rgba(255,255,255,0.7) 75%, white 100%)',
+            }}
+          >
+            <div
+              className="absolute bottom-0 left-0 right-0"
+              style={{
+                height: '50%',
+                backdropFilter: 'blur(8px)',
+                WebkitBackdropFilter: 'blur(8px)',
+                maskImage: 'linear-gradient(to bottom, transparent, black 40%, black)',
+                WebkitMaskImage: 'linear-gradient(to bottom, transparent, black 40%, black)',
+                background: 'linear-gradient(to bottom, transparent, rgba(255,255,255,0.6) 60%, white 100%)',
+              }}
+            />
+          </div>
+        </div>
+      </div>
+
+    </section>
+  );
+}
