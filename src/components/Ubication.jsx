@@ -1,6 +1,7 @@
 import { MapPin } from 'lucide-react';
 import useScrollReveal from '../hooks/useScrollReveal';
 import adornoImg from '../assets/images/ador_esquina_arriba_izquierda.png';
+import vale2 from '../assets/images/vale2.webp';
 
 export default function Ubication() {
   const [ref, visible]         = useScrollReveal();
@@ -66,31 +67,20 @@ export default function Ubication() {
 
       <div
         ref={refFoto}
-        className="relative w-full"
+        className="relative w-full px-6 pb-16"
         style={{ opacity: visibleFoto ? 1 : 0, transform: visibleFoto ? 'translateY(0)' : 'translateY(40px)', transition: 'opacity 0.9s ease 0.2s, transform 0.9s ease 0.2s' }}
       >
-        <div className="relative w-full overflow-hidden" style={{ aspectRatio: '3/4' }}>
-          <div className="w-full h-full bg-[#f4f9f6] flex flex-col items-center justify-center text-[#ACC8B4]/40 gap-3">
-            <span className="text-[9px] tracking-widest uppercase">foto de vale</span>
-          </div>
-
+        <div className="relative max-w-xs mx-auto">
           <div
-            className="absolute inset-0"
+            className="overflow-hidden"
             style={{
-              background: 'linear-gradient(to bottom, transparent 40%, rgba(255,255,255,0.3) 60%, rgba(255,255,255,0.7) 75%, white 100%)',
+              aspectRatio: '3/4',
+              borderRadius: '50% 50% 8px 8px / 35% 35% 8px 8px',
+              border: '1.5px solid #c9a84c50',
+              boxShadow: '0 8px 30px rgba(0,0,0,0.08)',
             }}
           >
-            <div
-              className="absolute bottom-0 left-0 right-0"
-              style={{
-                height: '50%',
-                backdropFilter: 'blur(8px)',
-                WebkitBackdropFilter: 'blur(8px)',
-                maskImage: 'linear-gradient(to bottom, transparent, black 40%, black)',
-                WebkitMaskImage: 'linear-gradient(to bottom, transparent, black 40%, black)',
-                background: 'linear-gradient(to bottom, transparent, rgba(255,255,255,0.6) 60%, white 100%)',
-              }}
-            />
+            <img src={vale2} alt="Valeria" className="w-full h-full object-cover" />
           </div>
         </div>
       </div>

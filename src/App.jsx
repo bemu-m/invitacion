@@ -3,6 +3,7 @@ import Galery from './components/Galery';
 import Countdown from './components/Countdown';
 import Ubication from './components/Ubication';
 import Footer from './components/Footer';
+import Confirmation from './components/Confirmation';
 
 export default function App() {
   return (
@@ -11,6 +12,7 @@ export default function App() {
       <Galery />
       <Countdown />
       <Ubication />
+      <Confirmation />
       <Footer />
     </div>
   );

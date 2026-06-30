@@ -1,6 +1,7 @@
 import { useRef, useState, useEffect } from 'react';
 import { Play, Pause, Volume2, VolumeX } from 'lucide-react';
 import useScrollReveal from '../hooks/useScrollReveal';
+import vale1 from '../assets/images/vale1.webp';
 
 export default function Galeria() {
     const [ref, visible] = useScrollReveal();
@@ -62,14 +63,11 @@ export default function Galeria() {
                     <div
                         className="w-full overflow-hidden bg-[#f4f9f6]"
                         style={{ borderRadius: '50% 50% 8px 8px / 40% 40% 8px 8px', border: '1.5px solid #c9a84c40', aspectRatio: '3/4', }}>
-                        <div className="w-full h-full flex flex-col items-center justify-center text-[#ACC8B4]/40 gap-3">
-                            <span className="text-6xl"></span>
-                            <span className="text-[9px] tracking-widest uppercase">foto de vale</span>
-                        </div>
+                        <img src={vale1} alt="Valeria" className="w-full h-full object-cover" />
                     </div>
                 </div>
                 <p className="text-xs tracking-[0.18em] uppercase text-[#5a7a65] leading-relaxed mb-8 max-w-[260px]" style={{ fontFamily: "'Jost', sans-serif" }} >
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus sit amet diam quis arcu ornare malesuada ut in odio. Morbi vel faucibus purus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent tempor massa et molestie rutrum. Sed eget varius tortor, sit amet mattis justo. Proin hendrerit enim id orci interdum, eu molestie risus malesuada.
+                    Acuérdate de tu Creador en los días de tu juventud, antes que vengan los días malos, y lleguen los años de los cuales digas: No tengo en ellos contentamiento. Eclesiastés 12:1 
                 </p>
 
                 <div className="flex items-center gap-3 w-full max-w-[200px] mb-8">
