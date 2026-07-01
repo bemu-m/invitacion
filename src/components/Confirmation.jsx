@@ -5,7 +5,7 @@ import useScrollReveal from '../hooks/useScrollReveal';
 import adornoImg from '../assets/images/ador_esquina_arriba_izquierda.png';
 
 const SHEETS_URL   = 'https://script.google.com/macros/s/AKfycbxzYj2JPy0HIrhfuma2nKTmLfHxl9lFER5ZwBbRtqhJ_iXzBmk0at8YvFmIfraS7k1JJw/exec';
-const WHATSAPP_NUM = '529613017335';
+const WHATSAPP_NUM = '529612137455';
 
 const EMAILJS_SERVICE_ID  = 'service_ti1a28g';
 const EMAILJS_TEMPLATE_ID = 'template_pcrwcqh';
