@@ -31,7 +31,7 @@ export default function Ubication() {
             <span className="flex-1 h-px bg-[#c9a84c]/30" />
           </div>
 
-          <p className="text-[10px] tracking-[0.3em] uppercase text-[#c9a84c] mb-1">6:00 PM</p>
+          <p className="text-[10px] tracking-[0.3em] uppercase text-[#c9a84c] mb-1">6:30 PM</p>
           <p className="text-base font-light tracking-widest text-[#2d4a38] uppercase mb-1">
             Salón Gardenias
           </p>
