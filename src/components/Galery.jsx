@@ -1,7 +1,7 @@
 import { useRef, useState, useEffect } from 'react';
 import { Play, Pause, Volume2, VolumeX } from 'lucide-react';
 import useScrollReveal from '../hooks/useScrollReveal';
-import vale1 from '../assets/images/vale1.webp';
+import vale1 from '../assets/images/pau2.jpeg';
 
 export default function Galeria() {
     const [ref, visible] = useScrollReveal();
@@ -61,39 +61,39 @@ export default function Galeria() {
                 style={{ opacity: visible ? 1 : 0, transform: visible ? 'translateY(0)' : 'translateY(40px)', transition: 'opacity 0.8s ease, transform 0.8s ease', }}>
                 <div className="relative w-full mb-10">
                     <div
-                        className="w-full overflow-hidden bg-[#f4f9f6]"
-                        style={{ borderRadius: '50% 50% 8px 8px / 40% 40% 8px 8px', border: '1.5px solid #c9a84c40', aspectRatio: '3/4', }}>
+                        className="w-full overflow-hidden bg-[#fbf1ee]"
+                        style={{ borderRadius: '50% 50% 8px 8px / 40% 40% 8px 8px', border: '1.5px solid #c9a15b40', aspectRatio: '3/4', }}>
                         <img src={vale1} alt="Valeria" className="w-full h-full object-cover" />
                     </div>
                 </div>
-                <p className="text-xs tracking-[0.18em] uppercase text-[#5a7a65] leading-relaxed mb-8 max-w-[260px]" style={{ fontFamily: "'Jost', sans-serif" }} >
+                <p className="text-xs tracking-[0.18em] uppercase text-[#6b4a42] leading-relaxed mb-8 max-w-[260px]" style={{ fontFamily: "'Jost', sans-serif" }} >
                     Acuérdate de tu Creador en los días de tu juventud, antes que vengan los días malos, y lleguen los años de los cuales digas: No tengo en ellos contentamiento. Eclesiastés 12:1 
                 </p>
 
-                <div className="flex items-center gap-3 w-full max-w-[200px] mb-8">
-                    <span className="flex-1 h-px bg-[#c9a84c]/30" />
-                    <span className="text-[#c9a84c] text-xs">✦</span>
-                    <span className="flex-1 h-px bg-[#c9a84c]/30" />
+                {/* <div className="flex items-center gap-3 w-full max-w-[200px] mb-8">
+                    <span className="flex-1 h-px bg-[#c9a15b]/30" />
+                    <span className="text-[#c9a15b] text-xs">✦</span>
+                    <span className="flex-1 h-px bg-[#c9a15b]/30" />
                 </div>
 
-                <p className="text-[9px] tracking-[0.35em] uppercase text-[#c9a84c]/70 mb-5">
+                <p className="text-[9px] tracking-[0.35em] uppercase text-[#c9a15b]/70 mb-5">
                     Dale play
                 </p>
 
-                <div className="w-full border border-[#c9a84c]/25 bg-white px-6 py-5 space-y-4"
-                    style={{ boxShadow: '0 4px 24px rgba(201,168,76,0.08)' }}>
+                <div className="w-full border border-[#c9a15b]/25 bg-white px-6 py-5 space-y-4"
+                    style={{ boxShadow: '0 4px 24px rgba(201,161,91,0.08)' }}>
                     <div
-                        className="w-full h-px bg-[#c9a84c]/15 relative cursor-pointer group" onClick={handleSeek} >
+                        className="w-full h-px bg-[#c9a15b]/15 relative cursor-pointer group" onClick={handleSeek} >
                         <div
-                            className="absolute top-0 left-0 h-full bg-[#c9a84c]/60 transition-all duration-100"
+                            className="absolute top-0 left-0 h-full bg-[#c9a15b]/60 transition-all duration-100"
                             style={{ width: `${progress}%` }} />
                         <div
-                            className="absolute top-1/2 -translate-y-1/2 w-2 h-2 rounded-full bg-[#c9a84c] opacity-0 group-hover:opacity-100 transition-opacity"
+                            className="absolute top-1/2 -translate-y-1/2 w-2 h-2 rounded-full bg-[#c9a15b] opacity-0 group-hover:opacity-100 transition-opacity"
                             style={{ left: `${progress}%`, transform: 'translate(-50%, -50%)' }}
                         />
                     </div>
 
-                    <div className="flex justify-between text-[9px] tracking-widest text-[#ACC8B4]">
+                    <div className="flex justify-between text-[9px] tracking-widest text-[#cba99f]">
                         <span>{formatTime(audioRef.current?.currentTime)}</span>
                         <span>{formatTime(duration)}</span>
                     </div>
@@ -101,14 +101,14 @@ export default function Galeria() {
                     <div className="flex items-center justify-center gap-6">
 
                         <button
-                            onClick={toggleMute} className="text-[#c9a84c]/50 hover:text-[#c9a84c] transition-colors duration-200" >
+                            onClick={toggleMute} className="text-[#c9a15b]/50 hover:text-[#c9a15b] transition-colors duration-200" >
                             {muted ? <VolumeX size={16} /> : <Volume2 size={16} />}
                         </button>
 
                         <button
                             onClick={togglePlay}
-                            className="w-12 h-12 rounded-full border border-[#c9a84c]/40 flex items-center justify-center text-[#c9a84c] hover:bg-[#c9a84c]/10 transition-all duration-300"
-                            style={{ boxShadow: '0 2px 12px rgba(201,168,76,0.15)' }} >
+                            className="w-12 h-12 rounded-full border border-[#c9a15b]/40 flex items-center justify-center text-[#c9a15b] hover:bg-[#c9a15b]/10 transition-all duration-300"
+                            style={{ boxShadow: '0 2px 12px rgba(201,161,91,0.15)' }} >
                             {playing
                                 ? <Pause size={18} />
                                 : <Play size={18} className="ml-0.5" />
@@ -116,7 +116,7 @@ export default function Galeria() {
                         </button>
                         <div className="w-4" />
                     </div>
-                </div>
+                </div> */}
 
             </div>
         </section>

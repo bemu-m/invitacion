@@ -4,8 +4,8 @@ import Hero from './components/Hero';
 import Galery from './components/Galery';
 import Countdown from './components/Countdown';
 import Ubication from './components/Ubication';
-import Confirmation from './components/Confirmation';
 import Footer from './components/Footer';
+import Padrinos from './components/Padrinos';
 
 export default function App() {
   const [opened, setOpened] = useState(false);
@@ -17,7 +17,7 @@ export default function App() {
   };
 
   return (
-    <div className="bg-[#FAFAF8]">
+    <div className="bg-[#fdf8f5]">
       {!opened && <Envelope onOpen={handleOpen} />}
       <div
         style={{
@@ -29,8 +29,8 @@ export default function App() {
         <Hero />
         <Galery />
         <Countdown />
+        <Padrinos/>
         <Ubication />
-        <Confirmation />
         <Footer />
       </div>
     </div>

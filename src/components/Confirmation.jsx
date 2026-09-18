@@ -11,7 +11,7 @@ const EMAILJS_SERVICE_ID  = 'service_ti1a28g';
 const EMAILJS_TEMPLATE_ID = 'template_pcrwcqh';
 const EMAILJS_PUBLIC_KEY  = 'cupA8UWLwsU9jUvcN';
 
-const inputClass = "w-full bg-transparent border-b border-[#c9a84c]/30 py-3 text-sm text-[#2d4a38] placeholder-[#ACC8B4] font-light tracking-wide focus:outline-none focus:border-[#c9a84c]/70 transition-colors duration-300";
+const inputClass = "w-full bg-transparent border-b border-[#c9a15b]/30 py-3 text-sm text-[#5b3f38] placeholder-[#cba99f] font-light tracking-wide focus:outline-none focus:border-[#c9a15b]/70 transition-colors duration-300";
 
 export default function Confirmation() {
   const [titleRef, titleVisible] = useScrollReveal();
@@ -86,7 +86,7 @@ export default function Confirmation() {
   };
 
   return (
-    <section className="relative bg-[#f4f9f6] py-20 px-6 overflow-hidden">
+    <section className="relative bg-[#fbf1ee] py-20 px-6 overflow-hidden">
 
       <img src={adornoImg} alt="" aria-hidden="true" className="absolute top-0 left-0 w-28 pointer-events-none select-none" style={{ opacity: 0.6 }} />
       <img src={adornoImg} alt="" aria-hidden="true" className="absolute top-0 right-0 w-28 pointer-events-none select-none" style={{ opacity: 0.6, transform: 'scaleX(-1)' }} />
@@ -100,42 +100,42 @@ export default function Confirmation() {
           className="text-center mb-12"
           style={{ opacity: titleVisible ? 1 : 0, transform: titleVisible ? 'translateY(0)' : 'translateY(30px)', transition: 'opacity 0.7s ease, transform 0.7s ease' }}
         >
-          <p className="text-[10px] tracking-[0.4em] uppercase text-[#c9a84c] mb-3">Confirma tu lugar</p>
-          <h2 className="text-5xl font-light italic text-[#2d4a38]" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
+          <p className="text-[10px] tracking-[0.4em] uppercase text-[#c9a15b] mb-3">Confirma tu lugar</p>
+          <h2 className="text-5xl font-light italic text-[#5b3f38]" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
             Asistencia
           </h2>
           <div className="flex items-center gap-3 max-w-[160px] mx-auto mt-4 mb-4">
-            <span className="flex-1 h-px bg-[#c9a84c]/30" />
-            <span className="text-[#c9a84c] text-[10px]">✦</span>
-            <span className="flex-1 h-px bg-[#c9a84c]/30" />
+            <span className="flex-1 h-px bg-[#c9a15b]/30" />
+            <span className="text-[#c9a15b] text-[10px]">✦</span>
+            <span className="flex-1 h-px bg-[#c9a15b]/30" />
           </div>
-          <p className="text-xs font-light text-[#7A9E87] tracking-wide">
-            Responde antes del <span className="text-[#c9a84c]">15 de julio, 2026</span>
+          <p className="text-xs font-light text-[#8c6f68] tracking-wide">
+            Responde antes del <span className="text-[#c9a15b]">15 de julio, 2026</span>
           </p>
         </div>
 
         {status === 'success' ? (
           <div
-            className="text-center py-16 border border-[#c9a84c]/20 px-8 bg-white/60"
+            className="text-center py-16 border border-[#c9a15b]/20 px-8 bg-white/60"
             style={{ opacity: 1, transition: 'opacity 0.5s ease' }}
           >
-            <span className="text-4xl block mb-4 text-[#c9a84c]">✦</span>
-            <h3 className="text-2xl font-light italic text-[#2d4a38] mb-3" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
+            <span className="text-4xl block mb-4 text-[#c9a15b]">✦</span>
+            <h3 className="text-2xl font-light italic text-[#5b3f38] mb-3" style={{ fontFamily: "'Cormorant Garamond', serif" }}>
               ¡Gracias!
             </h3>
-            <p className="text-xs text-[#7A9E87] font-light tracking-wide">
+            <p className="text-xs text-[#8c6f68] font-light tracking-wide">
               Tu confirmación fue recibida. ¡Nos vemos en la fiesta!
             </p>
           </div>
         ) : (
           <div
             ref={formRef}
-            className="border border-[#c9a84c]/20 p-8 space-y-8 bg-white/60"
+            className="border border-[#c9a15b]/20 p-8 space-y-8 bg-white/60"
             style={{ opacity: formVisible ? 1 : 0, transform: formVisible ? 'translateY(0)' : 'translateY(30px)', transition: 'opacity 0.8s ease 0.2s, transform 0.8s ease 0.2s' }}
           >
 
             <div>
-              <label className="block text-[9px] tracking-[0.3em] uppercase text-[#c9a84c]/70 mb-2">Nombre completo *</label>
+              <label className="block text-[9px] tracking-[0.3em] uppercase text-[#c9a15b]/70 mb-2">Nombre completo *</label>
               <input
                 type="text"
                 value={nombre}
@@ -146,7 +146,7 @@ export default function Confirmation() {
             </div>
 
             <div>
-              <label className="block text-[9px] tracking-[0.3em] uppercase text-[#c9a84c]/70 mb-4">¿Confirmas tu asistencia? *</label>
+              <label className="block text-[9px] tracking-[0.3em] uppercase text-[#c9a15b]/70 mb-4">¿Confirmas tu asistencia? *</label>
               <div className="flex gap-4">
                 {['Sí', 'No'].map((op) => (
                   <button
@@ -155,8 +155,8 @@ export default function Confirmation() {
                     onClick={() => setAsistencia(op)}
                     className={`flex-1 py-2.5 text-xs tracking-[0.2em] uppercase border transition-all duration-300 ${
                       asistencia === op
-                        ? 'border-[#c9a84c] text-[#c9a84c] bg-[#c9a84c]/10'
-                        : 'border-[#c9a84c]/20 text-[#ACC8B4] hover:border-[#c9a84c]/40'
+                        ? 'border-[#c9a15b] text-[#c9a15b] bg-[#c9a15b]/10'
+                        : 'border-[#c9a15b]/20 text-[#cba99f] hover:border-[#c9a15b]/40'
                     }`}
                   >
                     {op}
@@ -168,7 +168,7 @@ export default function Confirmation() {
             {asistencia === 'Sí' && (
               <>
                 <div>
-                  <label className="block text-[9px] tracking-[0.3em] uppercase text-[#c9a84c]/70 mb-3">
+                  <label className="block text-[9px] tracking-[0.3em] uppercase text-[#c9a15b]/70 mb-3">
                     Integrantes que asistirán
                   </label>
 
@@ -184,7 +184,7 @@ export default function Confirmation() {
                     <button
                       type="button"
                       onClick={() => { agregarIntegrante(); setDropdownOpen(true); }}
-                      className="flex-shrink-0 w-10 h-10 border border-[#c9a84c]/40 flex items-center justify-center text-[#c9a84c] hover:bg-[#c9a84c]/10 transition-all duration-300 self-end mb-0.5"
+                      className="flex-shrink-0 w-10 h-10 border border-[#c9a15b]/40 flex items-center justify-center text-[#c9a15b] hover:bg-[#c9a15b]/10 transition-all duration-300 self-end mb-0.5"
                     >
                       <UserPlus size={15} />
                     </button>
@@ -192,19 +192,19 @@ export default function Confirmation() {
 
                   {integrantes.length > 0 && (
                     <div
-                      className="border border-[#c9a84c]/15 bg-white divide-y divide-[#c9a84c]/10"
+                      className="border border-[#c9a15b]/15 bg-white divide-y divide-[#c9a15b]/10"
                       style={{ animation: 'fadeIn 0.3s ease' }}
                     >
                       {integrantes.map((nombre, i) => (
                         <div key={i} className="flex items-center justify-between px-4 py-2.5">
                           <div className="flex items-center gap-3">
-                            <span className="text-[#c9a84c]/40 text-[10px]">{i + 1}</span>
-                            <span className="text-xs text-[#2d4a38] font-light tracking-wide">{nombre}</span>
+                            <span className="text-[#c9a15b]/40 text-[10px]">{i + 1}</span>
+                            <span className="text-xs text-[#5b3f38] font-light tracking-wide">{nombre}</span>
                           </div>
                           <button
                             type="button"
                             onClick={() => eliminarIntegrante(i)}
-                            className="text-[#ACC8B4]/50 hover:text-red-400 transition-colors duration-200"
+                            className="text-[#cba99f]/50 hover:text-red-400 transition-colors duration-200"
                           >
                             <Trash2 size={13} />
                           </button>
@@ -215,7 +215,7 @@ export default function Confirmation() {
                 </div>
 
                 <div>
-                  <label className="block text-[9px] tracking-[0.3em] uppercase text-[#c9a84c]/70 mb-2">Número de teléfono</label>
+                  <label className="block text-[9px] tracking-[0.3em] uppercase text-[#c9a15b]/70 mb-2">Número de teléfono</label>
                   <input
                     type="tel"
                     value={telefono}
@@ -231,7 +231,7 @@ export default function Confirmation() {
               type="button"
               onClick={handleSubmit}
               disabled={status === 'sending' || !nombre || !asistencia}
-              className="w-full py-4 border border-[#c9a84c]/50 text-[#c9a84c] text-[10px] tracking-[0.35em] uppercase hover:bg-[#c9a84c]/10 disabled:opacity-30 disabled:cursor-not-allowed transition-all duration-300 flex items-center justify-center gap-3"
+              className="w-full py-4 border border-[#c9a15b]/50 text-[#c9a15b] text-[10px] tracking-[0.35em] uppercase hover:bg-[#c9a15b]/10 disabled:opacity-30 disabled:cursor-not-allowed transition-all duration-300 flex items-center justify-center gap-3"
             >
               <Send size={13} />
               {status === 'sending' ? 'Enviando...' : 'Confirmar asistencia'}

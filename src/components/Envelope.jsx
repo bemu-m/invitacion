@@ -14,7 +14,7 @@ export default function Envelope({ onOpen }) {
     <div
       className="fixed inset-0 z-50 flex flex-col items-center justify-center px-8"
       style={{
-        background: 'linear-gradient(135deg, #f0f7f2 0%, #FAFAF8 50%, #f5f0e8 100%)',
+        background: 'linear-gradient(135deg, #fbf1ee 0%, #fdf8f5 50%, #f5ebe0 100%)',
         opacity: state === 'expanding' ? 0 : 1,
         transition: state === 'expanding' ? 'opacity 0.9s ease' : 'none',
         pointerEvents: state === 'expanding' ? 'none' : 'auto',
@@ -26,8 +26,8 @@ export default function Envelope({ onOpen }) {
           50%       { transform: translateY(-8px); }
         }
         @keyframes sealPulse {
-          0%, 100% { transform: translate(-50%, -50%) scale(1); box-shadow: 0 4px 20px rgba(201,168,76,0.3); }
-          50%       { transform: translate(-50%, -50%) scale(1.05); box-shadow: 0 6px 28px rgba(201,168,76,0.5); }
+          0%, 100% { transform: translate(-50%, -50%) scale(1); box-shadow: 0 4px 20px rgba(201,161,91,0.3); }
+          50%       { transform: translate(-50%, -50%) scale(1.05); box-shadow: 0 6px 28px rgba(201,161,91,0.5); }
         }
         @keyframes expandEnvelope {
           0%   { transform: scale(1); opacity: 1; }
@@ -53,7 +53,7 @@ export default function Envelope({ onOpen }) {
       `}</style>
 
       <p
-        className="text-[10px] tracking-[0.4em] uppercase text-[#c9a84c] mb-10"
+        className="text-[10px] tracking-[0.4em] uppercase text-[#c9a15b] mb-10"
         style={{
           opacity: state === 'idle' ? 1 : 0,
           transition: 'opacity 0.3s ease',
@@ -73,9 +73,9 @@ export default function Envelope({ onOpen }) {
           <div
             className="absolute inset-0 rounded-sm"
             style={{
-              background: 'linear-gradient(160deg, #fefefe 0%, #f8f4ee 100%)',
+              background: 'linear-gradient(160deg, #fefefe 0%, #f8f0eb 100%)',
               boxShadow: '0 20px 60px rgba(0,0,0,0.12), 0 4px 16px rgba(0,0,0,0.08)',
-              border: '0.5px solid rgba(201,168,76,0.25)',
+              border: '0.5px solid rgba(201,161,91,0.25)',
               animation: state === 'idle' ? 'floatEnvelope 3s ease-in-out infinite' : 'none',
             }}
           />
@@ -83,7 +83,7 @@ export default function Envelope({ onOpen }) {
             className="absolute bottom-0 left-0 right-0"
             style={{
               height: '105px',
-              background: 'linear-gradient(160deg, #fefefe 0%, #f8f4ee 100%)',
+              background: 'linear-gradient(160deg, #fefefe 0%, #f8f0eb 100%)',
               clipPath: 'polygon(0% 100%, 50% 0%, 100% 100%)',
               zIndex: 3,
             }}
@@ -92,7 +92,7 @@ export default function Envelope({ onOpen }) {
             className="absolute top-0 left-0 bottom-0"
             style={{
               width: '150px',
-              background: 'linear-gradient(135deg, #f5f0e8 0%, #f0ebe0 100%)',
+              background: 'linear-gradient(135deg, #f5ebe0 0%, #f0e4d8 100%)',
               clipPath: 'polygon(0% 0%, 100% 50%, 0% 100%)',
               zIndex: 2,
             }}
@@ -101,7 +101,7 @@ export default function Envelope({ onOpen }) {
             className="absolute top-0 right-0 bottom-0"
             style={{
               width: '150px',
-              background: 'linear-gradient(225deg, #f5f0e8 0%, #f0ebe0 100%)',
+              background: 'linear-gradient(225deg, #f5ebe0 0%, #f0e4d8 100%)',
               clipPath: 'polygon(100% 0%, 0% 50%, 100% 100%)',
               zIndex: 2,
             }}
@@ -118,9 +118,9 @@ export default function Envelope({ onOpen }) {
               style={{
                 width: '100%',
                 height: '100%',
-                background: 'linear-gradient(180deg, #f8f3eb 0%, #f0ebe0 100%)',
+                background: 'linear-gradient(180deg, #f8f0eb 0%, #f0e4d8 100%)',
                 clipPath: 'polygon(0% 0%, 50% 100%, 100% 0%)',
-                borderTop: '0.5px solid rgba(201,168,76,0.2)',
+                borderTop: '0.5px solid rgba(201,161,91,0.2)',
               }}
             />
           </div>
@@ -134,8 +134,8 @@ export default function Envelope({ onOpen }) {
               width: '64px',
               height: '64px',
               borderRadius: '50%',
-              background: 'radial-gradient(circle at 35% 35%, #e8d08a, #c9a84c 50%, #a07830 100%)',
-              boxShadow: '0 4px 20px rgba(201,168,76,0.4), inset 0 1px 2px rgba(255,255,255,0.3)',
+              background: 'radial-gradient(circle at 35% 35%, #e8cf9a, #c9a15b 50%, #a67c3d 100%)',
+              boxShadow: '0 4px 20px rgba(201,161,91,0.4), inset 0 1px 2px rgba(255,255,255,0.3)',
               display: 'flex',
               alignItems: 'center',
               justifyContent: 'center',
@@ -161,10 +161,10 @@ export default function Envelope({ onOpen }) {
           transition: 'opacity 0.3s ease',
         }}
       >
-        <p className="text-xs font-light text-[#7A9E87] tracking-widest" style={{ fontFamily: "'Jost', sans-serif" }}>
+        <p className="text-xs font-light text-[#8c6f68] tracking-widest" style={{ fontFamily: "'Jost', sans-serif" }}>
           Toca para abrir
         </p>
-        <div style={{ width: '1px', height: '32px', background: 'linear-gradient(to bottom, transparent, #c9a84c, transparent)', animation: 'floatEnvelope 1.5s ease-in-out infinite' }} />
+        <div style={{ width: '1px', height: '32px', background: 'linear-gradient(to bottom, transparent, #c9a15b, transparent)', animation: 'floatEnvelope 1.5s ease-in-out infinite' }} />
       </div>
 
     </div>
