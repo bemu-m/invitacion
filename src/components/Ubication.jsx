@@ -54,7 +54,7 @@ export default function Ubication() {
             5:30 PM
           </p>
           <p className="text-base font-light tracking-widest text-[#5b3f38] uppercase mb-1">
-            Salón Gardenias
+            Salón Villa Florencia
           </p>
           <p className="text-xs italic text-[#8c6f68] mb-8">
             Dirección del lugar
